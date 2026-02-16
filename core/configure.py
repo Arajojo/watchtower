@@ -3,10 +3,12 @@ import json
 import pyodbc
 import pandas as pd
 
+data = []
 with open("config.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 def list_sql_instances():
+    
     instances = set()
 
     # Checa tanto o hive 64-bit quanto o 32-bit
@@ -28,7 +30,7 @@ def list_sql_instances():
                         i += 1
                     except OSError:
                         # WinError 259 -> acabou
-                        break
+                        break 
         except FileNotFoundError:
             # Esse caminho pode não existir em algumas instalações — segue o baile
             pass
@@ -63,7 +65,7 @@ def list_dbs():
     return dbs
 
 def configure():
-    
+
     insts = list_sql_instances()
     
     while True:

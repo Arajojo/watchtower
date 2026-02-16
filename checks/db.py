@@ -10,12 +10,12 @@ warnings.filterwarnings(
 )
 
 
-with open("config.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
+
 
 
 def check_db():
-
+    with open("config.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
     #======== CONFIG HERE ========
     SERVER   = ".{}".format(data["SQL_INSTANCE"])   # Ex: 'localhost\\SQLEXPRESS' ou '10.0.0.5'
     DATABASE = data["SELECTED_DB"] # << DB
