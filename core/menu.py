@@ -5,12 +5,34 @@ from checks.disk import *
 from checks.db import *
 
 def menu():
-    print("Bem vindo ao WatchTower, o que deseja fazer:")
+    print(r"""
+ ==========================================         
++------------------------------------------+          
+|            __    __   ______             |
+|           |  |/\|  | |_    _|            |
+|           |        |   |  |              |
+|            \__/\__/    |__|              |
+|                   .n.                    |  
+|        /___\          _.---.  \ _ /      |
+|        [|||]         (_._ ) )--;_) =-    |
+|        [___]           '---'.__,' \      |
+|        }-=-{                    |        |
+|        |-" |                             |
+|        |.-"|                p            |
+| ~^=~^~-|_.-|~^-~^~ ~^~ -^~^~|\ ~^-~^~-   |
+| ^   .=.| _.|__  ^       ~  /| \          |
+|  ~ /:. \" _|_/\    ~      /_|__\  ^      |
+| .-/::.  |   |""|-._    ^   ~~~~          |
+|   `===-'-----'""`  '-.              ~    |
+|                  __.-'      ^            |
++------------------------------------------+          
+ =========BEM VINDO AO WATCHTOWER!=========
+          """)
     while True:
 
         try:
 
-            print("1 - Check Up Geral\n2 - Limpeza dos dados temporários\n3 - Gerar relatório da Saúde da maquina\n4 - Configurar WatchTower\n0 - Sair.")
+            print("===================MENU===================\n\n1 - Check Up Geral\n2 - Limpeza dos dados temporários\n3 - Gerar relatório da Saúde da maquina\n4 - Configurar WatchTower\n0 - Sair.\n\n==========================================")
             x = int(input(""))
             match x:
                 case 1:
