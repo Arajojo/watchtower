@@ -57,3 +57,11 @@ venv\Scripts\activate     # Windows
 ```
 pip install -r requirements.txt
 ```
+
+## ▶️ Uso
+
+Execute o script principal:
+```
+python main.py
+```
+***O programa por enquanto não possui nenhum argumento.***
